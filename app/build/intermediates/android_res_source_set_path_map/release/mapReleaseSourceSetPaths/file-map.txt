@@ -1,0 +1,9 @@
+com.outtacitylimits.vault.app-pngs-0 /Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/generated/res/pngs/release
+com.outtacitylimits.vault.app-resValues-1 /Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/generated/res/resValues/release
+com.outtacitylimits.vault.app-updated_navigation_xml-2 /Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/generated/updated_navigation_xml/release
+com.outtacitylimits.vault.app-packageReleaseResources-3 /Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir
+com.outtacitylimits.vault.app-packageReleaseResources-4 /Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/intermediates/incremental/release/packageReleaseResources/stripped.dir
+com.outtacitylimits.vault.app-release-5 /Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/intermediates/merged_res/release/mergeReleaseResources
+com.outtacitylimits.vault.app-main-6 /Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/main/res
+com.outtacitylimits.vault.app-release-7 /Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/release/res
+gradleHome-0 /Users/user/.gradle

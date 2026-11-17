@@ -1,0 +1,2 @@
+com.outtacitylimits.vault
+xml photo_paths

@@ -1,0 +1,13 @@
+#Tue Nov 17 04:26:07 CST 2026
+base.0=/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
+base.3=/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build/intermediates/global_synthetics_dex/debug/generateDebugGlobalSynthetics/classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=6/classes.dex
+path.3=classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex

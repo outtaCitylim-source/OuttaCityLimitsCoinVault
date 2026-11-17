@@ -1,0 +1,116 @@
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build.gradle:9: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 35
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdk specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdk is
+   less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdk to the highest available value. Then
+   test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/gradle/wrapper/gradle-wrapper.properties:3: Warning: A newer version of Gradle than 9.6.0 is available: 9.9.1 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-9.6.0-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build.gradle:5: Warning: A newer version of compileSdk than 35 is available: 37 [GradleDependency]
+    compileSdk 35
+    ~~~~~~~~~~~~~
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/build.gradle:19: Warning: A newer version of androidx.core:core than 1.15.0 is available: 1.19.1 [GradleDependency]
+dependencies { implementation 'androidx.core:core:1.15.0' }
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/main/java/com/outtacitylimits/vault/MainActivity.java:95: Warning: Using setJavaScriptEnabled can introduce XSS vulnerabilities into your application, review carefully [SetJavaScriptEnabled]
+        web.getSettings().setJavaScriptEnabled(true);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetJavaScriptEnabled":
+   Your code should not invoke setJavaScriptEnabled if you are not sure that
+   your app really requires JavaScript support.
+
+   https://goo.gle/SetJavaScriptEnabled
+   https://developer.android.com/training/articles/security-tips
+
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/main/AndroidManifest.xml:4: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+    <application android:label="Outta City Limits Coin Vault" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:usesCleartextTraffic="false">
+                                                                                                                                                   ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/main/AndroidManifest.xml:4: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
+    <application android:label="Outta City Limits Coin Vault" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:usesCleartextTraffic="false">
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "MissingApplicationIcon":
+   You should set an icon for the application as whole because there is no
+   default. This attribute must be set as a reference to a drawable resource
+   containing the image (for example @drawable/icon).
+
+   https://developer.android.com/studio/publish/preparing#publishing-configure
+
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/main/java/com/outtacitylimits/vault/MainActivity.java:57: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        brandName.setText("OUTTA CITY LIMITS");
+                          ~~~~~~~~~~~~~~~~~~~
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/main/java/com/outtacitylimits/vault/MainActivity.java:64: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        appName.setText("Coin Vault");
+                        ~~~~~~~~~~~~
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/main/java/com/outtacitylimits/vault/MainActivity.java:70: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tagline.setText("Post, Texas  ·  Collect beyond the obvious");
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/user/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/ocl-android-studio/app/src/main/java/com/outtacitylimits/vault/MainActivity.java:82: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        refresh.setText("Reload");
+                        ~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 11 warnings

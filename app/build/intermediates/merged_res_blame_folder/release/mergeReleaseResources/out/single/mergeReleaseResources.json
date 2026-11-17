@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.outtacitylimits.vault.app-release-11:/xml_photo_paths.xml.flat",
+        "source": "com.outtacitylimits.vault.app-main-12:/xml/photo_paths.xml"
+    }
+]
