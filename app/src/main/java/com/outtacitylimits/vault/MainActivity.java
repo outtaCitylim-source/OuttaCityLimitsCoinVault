@@ -140,7 +140,53 @@ public class MainActivity extends Activity {
                 return true;
             }
         });
-        root.addView(web, new LinearLayout.LayoutParams(-1, 0, 1));
+        // TEMPORARY: Create Native RecyclerView for the "Inventory" view
+        androidx.recyclerview.widget.RecyclerView coinList = new androidx.recyclerview.widget.RecyclerView(this);
+        coinList.setLayoutManager(new androidx.recyclerview.widget.LinearLayoutManager(this));
+        coinList.setBackgroundColor(0xFFF5F2EA);
+        CoinAdapter adapter = new CoinAdapter();
+        coinList.setAdapter(adapter);
+
+        // Hide web view and show native list when hitting "Inventory"
+        navigation.getChildAt(1).setOnClickListener(view -> {
+            web.setVisibility(View.GONE);
+            coinList.setVisibility(View.VISIBLE);
+            
+            // Generate some MOCK coins to show on screen
+            ArrayList<Product> mockCoins = new ArrayList<>();
+            
+            Product p1 = new Product();
+            p1.setTitle("1921 Morgan Silver Dollar");
+            p1.setDescription("Beautiful uncirculated condition from the Philadelphia mint.");
+            p1.setPrice(45.00);
+            p1.setStatus("available");
+            
+            Product p2 = new Product();
+            p2.setTitle("1943 Steel Penny");
+            p2.setDescription("Rare wartime steel cent. Highly sought after.");
+            p2.setPrice(12.50);
+            p2.setStatus("sold");
+
+            Product p3 = new Product();
+            p3.setTitle("1909-S VDB Lincoln Cent");
+            p3.setDescription("The holy grail of Lincoln cents. Graded VF-20.");
+            p3.setPrice(1250.00);
+            p3.setStatus("available");
+            
+            mockCoins.add(p1);
+            mockCoins.add(p2);
+            mockCoins.add(p3);
+            
+            adapter.setCoins(mockCoins);
+        });
+
+        // FrameLayout to hold both web and native list, so we can swap them
+        android.widget.FrameLayout container = new android.widget.FrameLayout(this);
+        container.addView(web, new android.widget.FrameLayout.LayoutParams(-1, -1));
+        coinList.setVisibility(View.GONE); // Hide initially
+        container.addView(coinList, new android.widget.FrameLayout.LayoutParams(-1, -1));
+
+        root.addView(container, new LinearLayout.LayoutParams(-1, 0, 1));
         setContentView(root);
         if (state == null || web.restoreState(state) == null) web.loadUrl(ORIGIN + "/admin/products");
         root.requestApplyInsets();
